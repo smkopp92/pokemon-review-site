@@ -2,7 +2,7 @@ class PokemonIndexWrapper
   attr_reader :pokemon
 
   def initialize
-    @numbers = [1]
+    @numbers = []
     @pokemon = []
     grab_numbers
     grab_pokemon
