@@ -8,6 +8,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'dotenv-rails'
 gem 'dotenv'
+gem 'simplecov'
 
 group :development do
   gem 'listen', '~> 3.0.5'
