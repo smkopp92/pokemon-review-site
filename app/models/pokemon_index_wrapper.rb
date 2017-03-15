@@ -14,11 +14,11 @@ class PokemonIndexWrapper
     @numbers.each do |number|
       response = Net::HTTP.get_response(uri(number))
       json = JSON.parse(response.body)
-      type2 = json["types"][1]["type"]["name"] if json["types"][1]
+      type2 = json["types"][1]["type"]["name"].capitalize if json["types"][1]
       @pokemon << Pokemon.new(
         pokedex_number: number,
-        name: json["name"],
-        type_1: json["types"][0]["type"]["name"],
+        name: json["name"].capitalize,
+        type_1: json["types"][0]["type"]["name"].capitalize,
         type_2: type2,
         img_url: "http://serebii.net/art/th/#{number}.png"
       )
